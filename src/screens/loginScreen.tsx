@@ -4,14 +4,16 @@ import { Title } from 'react-native-paper';
 
 import FormButton from '../components/formButton';
 import FormInput from '../components/formInput';
-import { auth, db } from '../firebase/index';
+import {  db, app, auth } from '../firebase/index';
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 
 
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+
+  
 
   const loginUser = async (email: string, password: string) => {
     try {
