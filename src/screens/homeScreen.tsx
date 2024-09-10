@@ -20,7 +20,7 @@ export default function HomeScreen({ navigation }: any) {
 
     return (
         <View style={styles.container}>
-            <Title>ChatKitty Example</Title>
+            <Title>{'chatting app'}</Title>
             <FormButton
                 modeValue='contained'
                 title='Logout'
